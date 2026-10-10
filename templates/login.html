@@ -1,0 +1,261 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EV Charging | Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at 10% 20%, #00e5ff 0%, transparent 25%),
+                radial-gradient(circle at 90% 80%, #7c4dff 0%, transparent 25%),
+                linear-gradient(135deg, #07152f, #102a56, #07152f);
+
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 900px;
+            max-width: 95%;
+            display: flex;
+
+            background: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            overflow: hidden;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+            animation: zoomIn 1s;
+        }
+
+        .left {
+            width: 45%;
+            padding: 50px;
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                rgba(0, 229, 255, .25),
+                rgba(124, 77, 255, .25)
+            );
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .left h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .left p {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .right {
+            width: 55%;
+            background: white;
+            padding: 50px;
+            animation: slideRight 1.2s;
+        }
+
+        .right h2 {
+            text-align: center;
+            font-size: 34px;
+            color: #0077ff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            font-size: 15px;
+            outline: none;
+            transition: .3s;
+        }
+
+        input:focus {
+            border-color: #00b894;
+            box-shadow: 0 0 10px rgba(0, 184, 148, .3);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: linear-gradient(
+                90deg,
+                #00b894,
+                #00c6ff,
+                #0077ff
+            );
+
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 119, 255, .4);
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register a {
+            text-decoration: none;
+            color: #0077ff;
+            font-weight: bold;
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media(max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left">
+            <div class="logo">⚡</div>
+
+            <h1>Smart EV</h1>
+
+            <p>
+                Welcome Back!<br><br>
+                Login securely using your email or mobile number
+                and password to continue using Smart City EV
+                Charging Network.
+            </p>
+        </div>
+
+        <div class="right">
+
+            <h2>Login</h2>
+
+            <p class="subtitle">
+                Login using Email or Mobile Number
+            </p>
+
+            <form id="loginForm" action="/login" method="POST">
+
+                <input
+                    type="text"
+                    id="loginInput"
+                    name="email"
+                    placeholder="Email Address or Mobile Number"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                >
+
+                <button type="submit">
+                    🔐 Login
+                </button>
+
+            </form>
+
+            <div id="message"></div>
+
+            <div class="register">
+                Don't have an account?
+                <a href="/register">Register Here</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

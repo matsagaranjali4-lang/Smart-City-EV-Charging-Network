@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Smart EV Dashboard</title> 
+ 
+<style> 
+ 
+*{ 
+margin:0; 
+padding:0; 
+box-sizing:border-box; 
+font-family:"Segoe UI",sans-serif; 
+} 
+ 
+body{ 
+background: 
+radial-gradient(circle at 10% 20%,#00e5ff 0%,transparent 25%), 
+radial-gradient(circle at 90% 80%,#7c4dff 0%,transparent 25%), 
+linear-gradient(135deg,#07152f,#102a56,#07152f); 
+min-height:100vh; 
+display:flex; 
+justify-content:center; 
+align-items:center; 
+} 
+ 
+.container{ 
+width:1000px; 
+max-width:95%; 
+background:rgba(255,255,255,.10); 
+backdrop-filter:blur(20px); 
+border-radius:25px; 
+padding:40px; 
+box-shadow:0 20px 50px rgba(0,0,0,.4); 
+} 
+ 
+h1{ 
+text-align:center; 
+color:white; 
+font-size:40px; 
+margin-bottom:10px; 
+} 
+ 
+.container p{ 
+text-align:center; 
+color:#dbefff; 
+margin-bottom:35px; 
+} 
+ 
+.cards{ 
+display:grid; 
+grid-template-columns:repeat(3,1fr); 
+gap:25px; 
+} 
+ 
+.card{ 
+background:linear-gradient(135deg,#FAF5FF,#F3E8FF); 
+border-radius:20px; 
+padding:35px; 
+text-align:center; 
+cursor:pointer; 
+transition:0.3s; 
+color:#5B4B8A; 
+box-shadow:0 10px 20px rgba(221,214,254,0.35); 
+} 
+ 
+.card:hover{ 
+background:linear-gradient(135deg,#F5F3FF,#E9D5FF); 
+transform:translateY(-8px) scale(1.03); 
+box-shadow:0 15px 30px rgba(196,181,253,0.45); 
+} 
+ 
+.icon{ 
+font-size:55px; 
+margin-bottom:15px; 
+} 
+ 
+.card h2{ 
+font-size:22px; 
+margin-bottom:10px; 
+color:#6D28D9; 
+} 
+ 
+.card p{ 
+color:#7C3AED; 
+font-size:14px; 
+margin:0; 
+} 
+ 
+.logout{ 
+margin-top:35px; 
+text-align:center; 
+} 
+ 
+.logout a{ 
+background:linear-gradient(135deg,#FF9800,#F57C00); 
+color:white; 
+padding:15px 35px; 
+text-decoration:none; 
+border-radius:12px; 
+font-size:18px; 
+font-weight:bold; 
+transition:.3s; 
+} 
+ 
+.logout a:hover{ 
+opacity:.9; 
+} 
+ 
+@media(max-width:768px){ 
+.cards{ 
+grid-template-columns:1fr; 
+} 
+} 
+ 
+</style> 
+</head> 
+ 
+<body> 
+ 
+<div class="container"> 
+ 
+<h1>⚡ Smart City EV Charging Network</h1> 
+ 
+<p>Welcome to your Dashboard</p> 
+ 
+<div class="cards"> 
+ 
+<div class="card" onclick="location.href='/booking'"> 
+<div class="icon">⚡</div> 
+<h2>Book Slot</h2> 
+<p>Reserve your EV charging slot.</p> 
+</div> 
+ 
+<div class="card" onclick="location.href='/stations'"> 
+<div class="icon">📍</div> 
+<h2>Stations</h2> 
+<p>Find nearby charging stations.</p> 
+</div> 
+ 
+<div class="card" onclick="location.href='/bookings'"> 
+<div class="icon">📖</div> 
+<h2>My Bookings</h2> 
+<p>View your booking history.</p> 
+</div> 
+ 
+<div class="card" onclick="location.href='/profile'"> 
+<div class="icon">👤</div> 
+<h2>Profile</h2> 
+<p>Manage your account.</p> 
+</div> 
+ 
+<!-- BATTERY STATUS --> 
+<div class="card" onclick="location.href='/battery'"> 
+<div class="icon">🔋</div> 
+<h2>Battery Status</h2> 
+<p>Monitor charging information.</p> 
+</div> 
+ 
+<div class="card" onclick="location.href='/payment'"> 
+<div class="icon">💳</div> 
+<h2>Payments</h2> 
+<p>View payment details.</p> 
+</div>
+ 
+</div> 
+ 
+<div class="logout"> 
+<a href="/login">Logout</a> 
+</div> 
+ 
+</div> 
+ 
+</body> 
+</html>

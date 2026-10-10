@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nearby EV Charging Stations</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#07152f;
+color:white;
+padding:30px;
+}
+
+h1{
+text-align:center;
+color:#8BE9FD;
+margin-bottom:30px;
+font-size:40px;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:20px;
+}
+
+.card{
+background:linear-gradient(135deg,#BDEFFF,#7DD3FC);
+color:#0F172A;
+padding:20px;
+border-radius:18px;
+border:1px solid #BAE6FD;
+box-shadow:0 10px 20px rgba(125,211,252,.35);
+transition:.3s;
+}
+
+.card:hover{
+background:linear-gradient(135deg,#D6F4FF,#93E5FF);
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(125,211,252,.45);
+}
+
+.card h2{
+color:#0C4A6E;
+margin-bottom:10px;
+}
+
+.card p{
+color:#334155;
+font-size:17px;
+margin:6px 0;
+}
+
+.status{
+color:#16A34A;
+font-weight:bold;
+margin-top:10px;
+}
+
+button{
+margin-top:15px;
+padding:12px;
+width:100%;
+background:linear-gradient(135deg,#38BDF8,#0EA5E9);
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:linear-gradient(135deg,#0EA5E9,#0284C7);
+}
+
+.back{
+display:block;
+width:220px;
+margin:30px auto;
+text-align:center;
+padding:12px;
+background:linear-gradient(135deg,#38BDF8,#0EA5E9);
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.back:hover{
+background:linear-gradient(135deg,#0EA5E9,#0284C7);
+}
+.back{
+display:block;
+width:220px;
+margin:30px auto;
+text-align:center;
+padding:12px;
+background:#00c6ff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>⚡ Nearby EV Charging Stations</h1>
+
+<div class="container">
+
+<div class="card">
+<h2>Sanjivani EV Charging Station</h2>
+<p>📍 Kopargaon</p>
+<p>⚡ Chargers: 10</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Sanjivani+EV+Charging+Station+Kopargaon')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Shirdi EV Charging Station</h2>
+<p>📍 Shirdi</p>
+<p>⚡ Chargers: 8</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Shirdi+EV+Charging+Station')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Ahmednagar Fast Charging Hub</h2>
+<p>📍 Ahmednagar</p>
+<p>⚡ Chargers: 12</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Ahmednagar+Fast+Charging+Hub')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Nashik EV Charging Station</h2>
+<p>📍 Nashik</p>
+<p>⚡ Chargers: 15</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Nashik+EV+Charging+Station')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Aurangabad EV Charging Point</h2>
+<p>📍 Aurangabad</p>
+<p>⚡ Chargers: 10</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Aurangabad+EV+Charging+Point')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Pune EV Super Charging Station</h2>
+<p>📍 Pune</p>
+<p>⚡ Chargers: 20</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Pune+EV+Super+Charging+Station')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Mumbai EV Charging Hub</h2>
+<p>📍 Mumbai</p>
+<p>⚡ Chargers: 25</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Mumbai+EV+Charging+Hub')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Nagpur EV Charging Station</h2>
+<p>📍 Nagpur</p>
+<p>⚡ Chargers: 18</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Nagpur+EV+Charging+Station')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Tata Power EZ Charge</h2>
+<p>📍 India</p>
+<p>⚡ Chargers: 30</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Tata+Power+EZ+Charge')">View Location</button>
+</div>
+
+<div class="card">
+<h2>ChargeZone EV Station</h2>
+<p>📍 India</p>
+<p>⚡ Chargers: 22</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=ChargeZone+EV+Charging+Station')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Jio-bp Pulse Station</h2>
+<p>📍 India</p>
+<p>⚡ Chargers: 20</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Jio-bp+Pulse+Charging+Station')">View Location</button>
+</div>
+
+<div class="card">
+<h2>Statiq EV Charging Station</h2>
+<p>📍 India</p>
+<p>⚡ Chargers: 16</p>
+<p class="status">🟢 Available</p>
+<button onclick="window.open('https://www.google.com/maps/search/?api=1&query=Statiq+EV+Charging+Station')">View Location</button>
+</div>
+
+</div>
+
+<a href="/dashboard" class="back">⬅ Back to Dashboard</a>
+
+</body>
+</html>

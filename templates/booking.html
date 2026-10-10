@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book EV Charging Slot</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:
+radial-gradient(circle at 10% 20%,#00e5ff 0%,transparent 25%),
+radial-gradient(circle at 90% 80%,#7c4dff 0%,transparent 25%),
+linear-gradient(135deg,#07152f,#102a56,#07152f);
+}
+
+.container{
+width:550px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(20px);
+padding:35px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.5);
+color:white;
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+color:#00e5ff;
+}
+
+label{
+display:block;
+margin-top:15px;
+margin-bottom:6px;
+font-weight:bold;
+}
+
+input,select{
+width:100%;
+padding:13px;
+border:none;
+border-radius:10px;
+outline:none;
+font-size:15px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:25px;
+background:linear-gradient(90deg,#00b894,#00c6ff,#0077ff);
+border:none;
+border-radius:12px;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:#0077ff;
+}
+
+.back{
+display:block;
+text-align:center;
+margin-top:20px;
+color:#00e5ff;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>⚡ Book Charging Slot</h1>
+
+<form action="/booking" method="POST">
+
+<label>Full Name</label>
+<input type="text" name="fullname" placeholder="Enter Full Name" required>
+
+<label>Vehicle Number</label>
+<input type="text" name="vehicle_number" placeholder="MH12AB1234" required>
+
+<label>Select Charging Station</label>
+
+<select name="station" required>
+
+<option value="">-- Select Charging Station --</option>
+
+<option>Sanjivani EV Charging Station, Kopargaon</option>
+<option>Shirdi EV Charging Station</option>
+<option>Ahmednagar Fast Charging Hub</option>
+<option>Nashik EV Charging Station</option>
+<option>Aurangabad EV Charging Point</option>
+<option>Pune EV Super Charging Station</option>
+<option>Mumbai EV Charging Hub</option>
+<option>Nagpur EV Charging Station</option>
+<option>Tata Power EZ Charge Station</option>
+<option>ChargeZone EV Charging Station</option>
+<option>Jio-bp Pulse Charging Station</option>
+<option>Statiq EV Charging Station</option>
+
+</select>
+
+<label>Select Date</label>
+<input type="date" name="booking_date" required>
+
+<label>Select Time</label>
+<input type="time" name="booking_time" required>
+
+<button type="submit">
+⚡ Book Slot
+</button>
+
+</form>
+
+<a href="/dashboard" class="back">
+⬅ Back to Dashboard
+</a>
+
+</div>
+
+</body>
+</html>
